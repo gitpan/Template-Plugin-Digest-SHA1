@@ -1,0 +1,8 @@
+Makefile.PL
+SHA1.pm
+MANIFEST
+README
+t/00_use.t
+t/01_filter.t
+
+META.yml                                 Module meta-data (added by MakeMaker)
