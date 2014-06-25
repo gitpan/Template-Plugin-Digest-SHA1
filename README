@@ -1,65 +1,60 @@
-NAME
-    Template::Plugin::Digest::SHA1 - TT2 interface to the SHA1 Algorithm
+Template-Plugin-Digest-SHA1
+===========================
 
-SYNOPSIS
-      [% USE Digest.SHA1 -%]
-      [% checksum = content FILTER sha1 -%]
-      [% checksum = content FILTER sha1_hex -%]
-      [% checksum = content FILTER sha1_base64 -%]
-      [% checksum = content.sha1 -%]
-      [% checksum = content.sha1_hex -%]
-      [% checksum = content.sha1_base64 -%]
+The Digest.SHA1 Template Toolkit plugin provides access to the SHA1 algorithm 
+via the Digest::SHA1 module.  It is used like a plugin but installs filters 
+and vmethods into the current context.
 
-DESCRIPTION
-    The *Digest.SHA1* Template Toolkit plugin provides access to the NIST
-    SHA-1 algorithm via the "Digest::SHA1" module. It is used like a plugin
-    but installs filters and vmethods into the current context.
+INSTALLATION
 
-    When you invoke
+To install this module type the following:
 
-        [% USE Digest.SHA1 %]
+   perl Makefile.PL
+   make
+   make test
+   make install
 
-    the following filters (and vmethods of the same name) are installed into
-    the current context:
+DEPENDENCIES
 
-    "sha1"
-        Calculate the SHA-1 digest of the input, and return it in binary
-        form. The returned string will be 20 bytes long.
+This module requires these modules:
 
-    "sha1_hex"
-        Same as "sha1", but will return the digest in hexadecimal form. The
-        length of the returned string will be 40 and it will only contain
-        characters from this set: '0'..'9' and 'a'..'f'.
+  Template
+  Template::Plugin
+  Template::Stash
+  Digest::SHA1
 
-    "sha1_base64"
-        Same as "sha1", but will return the digest as a base64 encoded
-        string. The length of the returned string will be 27 and it will
-        only contain characters from this set: 'A'..'Z', 'a'..'z', '0'..'9',
-        '+' and '/'.
+For testing the module requires these modules:
 
-        Note that the base64 encoded string returned is not padded to be a
-        multiple of 4 bytes long. If you want interoperability with other
-        base64 encoded sha1 digests you might want to append the redundant
-        string "=" to the result.
+  IO::File
+  Test::More
 
-    As the filters are also available as vmethods the following are all
-    equivalent:
+For optional testing the module would like these modules:
 
-        FILTER sha1_hex; content; END;
-        content FILTER sha1_hex;
-        content.sha1_base64;
+  Test::CPAN::Meta
+  Test::CPAN::Meta::JSON
+  Test::Pod
+  Test::Pod::Coverage
 
-AUTHOR
-    Andrew Ford <A.Ford@ford-mason.co.uk>
+DEDICATION
 
-    Thanks to Darren Chamberlain for a patch for vmethod support.
+This distribution was originally created by Andrew Ford. Sadly in early 2014,
+Andrew was diagnosed with Pancreatic Cancer and passed away peacfully at home
+on 25th April 2014.
 
-COPYRIGHT
-    Copyright (C) 2006 Andrew Ford. All Rights Reserved.
+One of his wishes was for his OpenSource work to continue. At his funeral, many
+of his colleagues and friends, spoke of how he felt like a person of the world, 
+and how he embrace the idea of OpenSource being for the benefit of the world.
 
-    This library is free software; you can redistribute it and/or modify it
-    under the same terms as Perl itself.
+Anyone wishing to donate in memory of Andrew, please consider the following
+charities:
 
-SEE ALSO
-    "Digest::SHA1", Template
+* Dignity in Dying - http://www.dignityindying.org.uk/
+* Marie Curie Cancer Care - http://www.mariecurie.org.uk/
 
+COPYRIGHT AND LICENSE
+
+  Copyright (C) 2006-2014 Andrew Ford
+  Copyright (C) 2014      Barbie for Miss Barbell Productions.
+
+This distribution is free software; you can redistribute it and/or
+modify it under the Artistic Licence v2.

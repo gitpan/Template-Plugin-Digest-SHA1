@@ -1,5 +1,6 @@
+#!/usr/bin/perl -w
 use strict;
-use blib;
+
 use Template::Test;
 
 test_expect(\*DATA);
@@ -82,5 +83,3 @@ Donec pharetra, nibh nec mollis tristique, lorem turpis viverra elit, in sollici
 151af6b8c3a6aa09cfccbd34601f2d309ed54888
 151af6b8c3a6aa09cfccbd34601f2d309ed54888
 151af6b8c3a6aa09cfccbd34601f2d309ed54888
-
-
