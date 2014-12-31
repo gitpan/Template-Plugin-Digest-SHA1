@@ -18,10 +18,10 @@ DEPENDENCIES
 
 This module requires these modules:
 
+  Digest::SHA1
   Template
   Template::Plugin
   Template::Stash
-  Digest::SHA1
 
 For testing the module requires these modules:
 

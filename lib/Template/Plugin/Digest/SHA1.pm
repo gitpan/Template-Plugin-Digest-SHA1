@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use vars qw($VERSION);
 
-$VERSION = 0.04;
+$VERSION = 0.05;
 
 use base qw(Template::Plugin);
 use Template::Plugin;
@@ -107,7 +107,7 @@ equivalent:
 
 =head1 SEE ALSO
 
-L<Digest::MD5>, L<Template>
+L<Digest::SHA1>, L<Template>
 
 =head1 DEDICATION
 

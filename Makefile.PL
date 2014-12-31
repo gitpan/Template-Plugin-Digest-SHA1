@@ -8,7 +8,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     AUTHOR              => 'Barbie <barbie@cpan.org>',
-    NAME                => 'Template-Plugin-Digest-SHA1',
+    NAME                => 'Template::Plugin::Digest::SHA1',
     VERSION_FROM        => 'lib/Template/Plugin/Digest/SHA1.pm',
     ABSTRACT            => 'TT2 interface to the SHA1 Algorithm',
     NO_META             => 1,
